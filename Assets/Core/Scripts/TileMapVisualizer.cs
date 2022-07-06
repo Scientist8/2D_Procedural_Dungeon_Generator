@@ -13,14 +13,6 @@ public class TileMapVisualizer : MonoBehaviour
                      wallInnerCornerDownLeft, wallInnerCornerDownRight,
                      wallDiagonalCornerDownRight, wallDiagonalCornerDownLeft, wallDiagonalCornerUpRight, wallDiagonalCornerUpLeft;
    
-    
-    
-    //[SerializeField]
-    //private GameObject towerTilePrefab;
-    //[SerializeField]
-    //private GameObject towerTileParent;
-
-    //public List<GameObject> towerTiles = new List<GameObject>();
 
     public void PaintFloorTiles(IEnumerable<Vector2Int> floorPositions)
     {
@@ -58,12 +50,6 @@ public class TileMapVisualizer : MonoBehaviour
         {
             PaintSingleTile(wallTileMap, tile, position);
         }
-
-        // Instantiate tower tiles
-        //GameObject go = Instantiate(towerTilePrefab, new Vector3(position.x + 0.5f, position.y + 0.5f, 0), Quaternion.identity);
-        //go.transform.parent = towerTileParent.transform;
-
-        //towerTiles.Add(go as GameObject);
     }
 
     private void PaintTiles(IEnumerable<Vector2Int> positions, Tilemap tileMap, TileBase tile)
@@ -130,12 +116,5 @@ public class TileMapVisualizer : MonoBehaviour
     {
         floorTileMap.ClearAllTiles();
         wallTileMap.ClearAllTiles();
-
-        //Clear tower tiles
-        //for (int i = 0; i < towerTiles.Count; i++)
-        //{
-        //    DestroyImmediate(towerTiles[i]);
-        //}
-        //towerTiles.Clear();
     }
 }
